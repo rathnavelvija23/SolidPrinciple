@@ -1,0 +1,9 @@
+Single Responsibility Principle:
+
+The Single Responsibility Principle states that every Java class must perform single functionality.
+Implementation of multiple functionlities in a single class mashup the code.
+
+
+Open-Closed Principle:
+
+Open for extension and closed for modification
