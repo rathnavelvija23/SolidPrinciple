@@ -25,3 +25,18 @@ Create Abstract class with multiple methods and one of the service will not impl
 create two interface and specific method into it
 implement whichever needed.
 
+
+Interface segregation:
+
+We should not force client to implement the methods from interface which is not irrelavant
+
+Segregate the method into different interfaces
+
+
+Dependency INversion
+
+High level module should not depend on low level modules . Both should depend on abstarction
+
+Create common interface like BankCard for both credit and debit
+BankCard b = new DebitCard() -> which will do runtime calling.
+
