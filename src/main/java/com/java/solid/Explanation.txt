@@ -14,3 +14,14 @@ Class having three methods based on type(input - car,personal,home loan)
 Create interface for the getloan method
 create 3 different service class and implments inside it
 
+
+Liskov Substitution Principle:
+
+It applies to Inheritance - the derived class must be completely substitutable for their base classes
+
+If Class B is subtype of Class A . Then we should be able to replace A with B.
+
+Create Abstract class with multiple methods and one of the service will not implemnet the method and it cannpt replace it
+create two interface and specific method into it
+implement whichever needed.
+
