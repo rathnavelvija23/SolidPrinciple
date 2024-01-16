@@ -1,6 +1,6 @@
 package com.java.solid.SingleResponsibility;
 
-public class BankService {
+public class BankServiceBreakThePrinciple {
 
     public long deposit(String accountNo, long amount){
         //Deposit amount Logic

@@ -3,7 +3,14 @@ Single Responsibility Principle:
 The Single Responsibility Principle states that every Java class must perform single functionality.
 Implementation of multiple functionlities in a single class mashup the code.
 
+One method inside one class
+
 
 Open-Closed Principle:
 
-Open for extension and closed for modification
+Open for extension and closed for modification.
+
+Class having three methods based on type(input - car,personal,home loan)
+Create interface for the getloan method
+create 3 different service class and implments inside it
+
