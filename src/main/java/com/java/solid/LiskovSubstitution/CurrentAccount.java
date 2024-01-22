@@ -16,4 +16,6 @@ public class CurrentAccount extends BankServiceLiskovBreakit{
     public String getCarLoan(String accountNo, Long amount) {
         return null;
     }
+
+    public String value = "new";
 }
