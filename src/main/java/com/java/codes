@@ -1,0 +1,70 @@
+public class Main {
+    // Extending Thread class
+    static class MyThread extends Thread {
+        public void run() {
+            // Thread logic goes here
+            System.out.println("Thread (subclass of Thread) is running");
+        }
+    }
+
+    // Implementing Runnable interface
+    static class MyRunnable implements Runnable {
+        public void run() {
+            // Thread logic goes here
+            System.out.println("Thread (implementing Runnable) is running");
+        }
+    }
+
+    public static void main(String[] args) {
+        // Creating and starting thread using subclass of Thread
+        MyThread thread1 = new MyThread();
+        thread1.start();
+
+        // Creating and starting thread using Runnable interface
+        MyRunnable myRunnable = new MyRunnable();
+        Thread thread2 = new Thread(myRunnable);
+        thread2.start();
+    }
+}
+-------------------------------------------------------------------
+public final class ImmutableClass {
+    private final int value;
+    private final String name;
+    private final int[] array; // Mutable field
+
+    public ImmutableClass(int value, String name, int[] array) {
+        this.value = value;
+        this.name = name;
+        this.array = array.clone(); // Defensive copy
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int[] getArray() {
+        return array.clone(); // Defensive copy
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value, name, Arrays.hashCode(array));
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        ImmutableClass that = (ImmutableClass) obj;
+        return value == that.value && Objects.equals(name, that.name) && Arrays.equals(array, that.array);
+    }
+
+    @Override
+    public String toString() {
+        return "ImmutableClass{" + "value=" + value + ", name='" + name + '\'' + ", array=" + Arrays.toString(array) + '}';
+    }
+}
