@@ -27,6 +27,10 @@ public class Main {
     }
 }
 -------------------------------------------------------------------
+
+List<String> immutableList = Collections.unmodifiableList(mutableList);
+
+------------------------------------------------------------------------------
 public final class ImmutableClass {
     private final int value;
     private final String name;
